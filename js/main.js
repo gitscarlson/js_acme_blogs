@@ -287,5 +287,3 @@ const initApp = () => {
 }
 
 document.addEventListener("DOMContentLoaded", initApp());
-
-//console.log(deleteChildElements(document.querySelector('main')));
