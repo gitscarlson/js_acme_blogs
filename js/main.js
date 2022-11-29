@@ -262,6 +262,7 @@ const refreshPosts = async (jsonPost) => {
 
 //Function 19 selectMenuChangeEventHandler
 const selectMenuChangeEventHandler = async (e) => {
+  if(!e) return undefined;
   document.getElementById("selectMenu").disabled=true;
   const id = e?.target?.value || 1;
   let jsonPost = await getUserPosts(id);
