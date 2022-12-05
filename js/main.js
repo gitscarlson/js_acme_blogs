@@ -32,7 +32,7 @@ const toggleCommentSection = (postID) => {
   for (let i = 0; i < getCommentSection.length; i++) {
     const getEleSection = getCommentSection[i];
     if (getEleSection.getAttribute("data-post-id") == postID) {
-      getEleSection.classList.toggle("hide");
+      getEleSection.classList.toggle('hide');
       return getEleSection;
     }
   }
@@ -282,9 +282,9 @@ const initPage = async () => {
 const initApp = () => {
   initPage();
   const select = document.getElementById("selectMenu");
-  select.addEventListener("change", function (e) {
-    selectMenuChangeEventHandler(),false
-  });
+  select.addEventListener('change', 
+    selectMenuChangeEventHandler
+  );
 }
 
 document.addEventListener("DOMContentLoaded", initApp());

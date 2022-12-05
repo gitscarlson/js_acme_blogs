@@ -21,10 +21,10 @@ select {
     --MAIN-BGCOLOR: #FFF;
     --MAIN-FONT-COLOR: #333;
     --MAIN-BORDER: #333;
-    --POST-BGCOLOR: #FFF; 
+    --POST-BGCOLOR: #FFF;
     --BUTTON-BGCOLOR: #333;
     --BUTTON-COLOR: #FFF;
-    --BOX-SHADOW: rgb(0,0,0,0.5);
+    --BOX-SHADOW: rgb(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,9 +33,9 @@ select {
         --HEAD-FOOT-BGCOLOR: #1a1a1a;
         --MAIN-BGCOLOR: #21262d;
         --MAIN-FONT-COLOR: #FFF;
-        --POST-BGCOLOR: #2b323b; 
+        --POST-BGCOLOR: #2b323b;
     }
-} 
+}
 
 /* || UTILITY CLASSES */
 
@@ -58,12 +58,14 @@ body {
     flex-direction: column;
 }
 
-header, footer {
+header,
+footer {
     background-color: var(--HEAD-FOOT-BGCOLOR);
     color: var(--HEAD-FOOT-COLOR);
     width: 100%;
     padding: 1rem;
     position: sticky;
+    z-index: 1;
 }
 
 header {
@@ -90,7 +92,7 @@ main {
     padding-top: 0.25rem;
 }
 
-.selectMenu  {
+.selectMenu {
     width: 270px;
     padding: 0.25rem;
     border-radius: 0.75rem;
@@ -113,15 +115,15 @@ article {
     box-shadow: 2px 2px 5px 2px var(--BOX-SHADOW);
 }
 
-article > p {
+article>p {
     margin-top: 0.25rem;
 }
 
-article > p:nth-child(5) {
+article>p:nth-child(5) {
     font-style: italic;
 }
 
-article > button {
+article>button {
     padding: 0.5em;
     margin-top: 0.5em;
     border-radius: 0.5rem;
@@ -130,24 +132,25 @@ article > button {
 }
 
 .comments {
-   font-size: 0.8rem;
-   animation: showComments 0.5s ease-in-out forwards;
-   transform-origin: top center;
+    font-size: 0.8rem;
+    animation: showComments 0.5s ease-in-out forwards;
+    transform-origin: top center;
 }
 
 @keyframes showComments {
     0% {
-      transform: scaleY(0);
+        transform: scaleY(0);
     }
+
     100% {
-      transform: scaleY(1);
+        transform: scaleY(1);
     }
-  }
+}
 
 /* || MEDIA QUERIES */
 
 @media only screen and (min-width: 400px) {
-    .selectMenu  {
+    .selectMenu {
         font-size: 1.4rem;
         max-width: 270px;
     }
